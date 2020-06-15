@@ -38,6 +38,12 @@
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
 
+  <joint type="fixed" name="camera_optical_joint">
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
+    <child link="camera_link_optical"/>
+    <parent link="camera_link"/>
+  </joint>
+
   <joint type="fixed" name="scan_joint">
     <origin xyz="0.0 0 0.38" rpy="0 0 0"/>
     <child link="scan_link"/>
@@ -186,6 +192,9 @@
       </geometry>
     </visual>
 
+  </link>
+
+  <link name="camera_link_optical">
   </link>
 
   <!--lidar-->
