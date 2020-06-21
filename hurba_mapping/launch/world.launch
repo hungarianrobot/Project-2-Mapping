@@ -34,10 +34,7 @@
               -x $(arg x) -y $(arg y) -z $(arg z)
               -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
-  <!-- Map Server -->
-  <arg name="map_file" default="$(find hurba_mapping)/maps/map.yaml"/>
-  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
-      <remap from="map" to="map_gt"/>
-  </node>
+  <!--launch rviz-->
+  <!--node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find hurba_mapping)/rviz/basic_view.rviz"/--> 
 
 </launch>
