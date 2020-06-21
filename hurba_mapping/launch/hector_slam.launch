@@ -4,6 +4,12 @@
     <!-- Launch other relevant files-->
     <include file="$(find hurba_mapping)/launch/world.launch"/>
 
+    <!-- Map Server -->
+    <arg name="map_file" default="$(find hurba_mapping)/maps/map_hector.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
+        <remap from="map" to="map_gt"/>
+    </node>
+
     <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping" output="screen">
         <param name="base_frame" value="base_footprint" />
         <param name="odom_frame" value="odom"/>
