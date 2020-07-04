@@ -24,7 +24,7 @@
 
 ### Project build instrctions:
 1. Clone this repo inside the `src` folder of a catkin workspace with the PGM Map Creator submodule:
-`git clone --recurse-submodules https://github.com/hungarianrobot/Project-2-Mapping-Localization`
+`git clone --recurse-submodules https://github.com/hungarianrobot/Project-2-Mapping`
 2. Install `libignition-math2-dev` and `protobuf-compiler` to compile the map creator:
 `sudo apt-get install libignition-math2-dev protobuf-compiler`
 3. Build workspace: `catkin_make`
@@ -74,7 +74,7 @@ Un-comment the `rtabmapviz` node in the `rtab_map_slam.launch` file. In the visu
 #### Evaluating the RTAB-Map database
 After the mapping is done we can evaluate the database with RTAB-Map's database viewer, that can be started with the following command:
 
-`rtabmap-databaseViewer ~/catkin_ws/src/Project-2-Mapping-Localization/hurba_mapping/maps/database/rtabmap.db`
+`rtabmap-databaseViewer ~/catkin_ws/src/Project-2-Mapping/hurba_mapping/maps/database/rtabmap.db`
 
 ![alt text][image7]
 
